@@ -11,7 +11,8 @@ import java.util.List;
  */
 @Repository
 public interface PlayerRepository extends JpaRepository<Player, Integer> {
-    List<Player> findByNicknameOrNumberLike(String str);
+
+    List<Player> findByNicknameLike(String nickname);
 
     Player findByNickname(String nickname);
 }

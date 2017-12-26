@@ -28,12 +28,11 @@ public class UserRepositoryTest {
     public void add(){
         for (int i = 0; i < 5; i++) {
             User user = new User();
-            user.setWxName("love"+i);
+            user.setWxName("loveme"+i);
             user.setDevice("iphone6");
             user.setWxAccount("99");
             userRepository.save(user);
         }
-
     }
 
     @Test

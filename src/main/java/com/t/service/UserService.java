@@ -60,16 +60,17 @@ public class UserService {
     }
 
     public String getPlayersByNumOrNickname(String target) {
-        List<Player> playerList = playerRepository.findByNicknameOrNumberLike(target);
-        return JSON.toJSONString(playerList);
+        //List<Player> playerList = playerRepository.findByNicknameOrNumberLike(target);
+        //return JSON.toJSONString(playerList);
+        return "1";
     }
 
     public String donateGift(String giftType, String nickname) {
         String wxname = "aaa";
-        Player player = playerRepository.findByNickname(nickname);
+        //Player player = playerRepository.findByNickname(nickname);
         User user = userRepository.findByWxName(wxname);
         Gift gift = giftRepository.findByBuyer(user);
-        gift.setOwner(player);
+        //gift.setOwner(player);
         Gift data = giftRepository.save(gift);
         return JSON.toJSONString(data);
     }

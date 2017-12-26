@@ -14,7 +14,7 @@ public class Player {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String number;
-    private String name;
+    private String nickname;
     private String slogan;
     private String phone;
     private int photo;
@@ -50,12 +50,12 @@ public class Player {
         this.number = number;
     }
 
-    public String getName() {
-        return name;
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
     public String getSlogan() {
@@ -104,5 +104,19 @@ public class Player {
 
     public void setGainGifts(List<Gift> gainGifts) {
         this.gainGifts = gainGifts;
+    }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "id=" + id +
+                ", number='" + number + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", slogan='" + slogan + '\'' +
+                ", phone='" + phone + '\'' +
+                ", photo=" + photo +
+                ", user=" + user +
+                ", room=" + room +
+                '}';
     }
 }
